@@ -3,7 +3,7 @@ from django import forms      # importação do formulario do django
 from .models import EtaUm      # importando o modelo de Banco de dados
 
 
-class Eta1Form(forms.ModelForm):
+class EtaUmForm(forms.ModelForm):
     # deixar o formato de data escolhida por um calendario
     data = forms.DateField(
         label='Data',

@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
-from eta_um.forms import Eta1Form
+from eta_um.forms import EtaUmForm
 from eta_um.models import EtaUm
 
 
@@ -10,15 +10,15 @@ from eta_um.models import EtaUm
 
 
 def eta_um_list(request):
-    template_name = 'eta_um_list.html'
+    template_name = 'eta_dois_list.html'
     obj = EtaUm.objects.all()
     context = {'object_list': obj}
     return render(request, template_name, context)
 
 
 def eta_um_add(request):
-    form = Eta1Form(request.POST or None)
-    template_name = 'eta_um_add.html'
+    form = EtaUmForm(request.POST or None)
+    template_name = 'eta_dois_add.html'
     if request.method == 'POST':
         if form.is_valid():
             form.save()
@@ -28,9 +28,9 @@ def eta_um_add(request):
 
 
 def eta_um_update(request, pk):
-    template_name = 'eta_um_update.html'
+    template_name = 'eta_dois_update.html'
     obj = EtaUm.objects.get(pk=pk)
-    form = Eta1Form(request.POST or None, instance=obj)
+    form = EtaUmForm(request.POST or None, instance=obj)
     if request.method == 'POST':
         if form.is_valid():
             form.save()
