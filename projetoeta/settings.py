@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'captacao',
     'eta_um',
     'eta_dois',
+    'eta_tres',
     'crispy_forms',
 ]
 # Application definition
