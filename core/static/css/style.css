@@ -1,0 +1,16 @@
+body {
+  margin-top: 80px;
+}
+
+#jumbotron{
+    margin-top: rem;
+}
+
+
+.ok {
+  color: green;
+}
+
+.no {
+  color: red;
+}
