@@ -31,6 +31,7 @@ class Etatres(models.Model):
     turbidez_t = models.DecimalField('Turbidez Tratada', max_digits=4, decimal_places=2, blank=True, null=True)
 
     class Meta:
+        ordering = ('-data',)
         verbose_name = 'ETA TRÊS'
 
     def __str__(self):
