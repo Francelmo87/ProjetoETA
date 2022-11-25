@@ -12,9 +12,9 @@ from captacao.models import Captacao
 
 def captacao_list(request):
     template_name = 'captacao_list.html'
-    obj_list = Captacao.objects.all()
+    obj = Captacao.objects.all()
 
-    paginator = Paginator(obj_list, 3)
+    paginator = Paginator(obj, 12)
     page_number = request.GET.get('page')
     object_list = paginator.get_page(page_number)
 
