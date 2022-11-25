@@ -35,6 +35,7 @@ class EtaUm(models.Model):
     filtro4 = models.DecimalField('Filtro 4', max_digits=4, decimal_places=2, blank=True, null=True)
 
     class Meta:
+        ordering = ('-data',)
         verbose_name = 'ETA 1'
         verbose_name_plural = 'ETAS 1'
 
