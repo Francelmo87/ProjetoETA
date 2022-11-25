@@ -26,6 +26,7 @@ class Captacao(models.Model):
     turbidez_b = models.DecimalField('Turbidez Bruta', max_digits=5, decimal_places=2, blank=True, null=True)
 
     class Meta:
+        ordering = ('-data',)
         verbose_name = 'CAPTAÇÃO'
         verbose_name_plural = 'CAPTAÇÕES'
 
