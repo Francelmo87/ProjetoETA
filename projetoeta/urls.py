@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('eta_saida/', include('eta_saida.urls')),
+    path('saida/', include('saida.urls')),
     path('eta_cinco/', include('eta_cinco.urls')),
     path('eta_quatro/', include('eta_quatro.urls')),
     path('eta_tres/', include('eta_tres.urls')),
