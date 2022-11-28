@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'eta_dois',
     'eta_tres',
     'eta_quatro',
+    'eta_cinco',
     'crispy_forms',
 ]
 # Application definition
