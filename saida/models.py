@@ -29,8 +29,8 @@ class Saida(models.Model):
 
     class Meta:
         ordering = ('-data',)
-        verbose_name = 'CAPTAÇÃO'
-        verbose_name_plural = 'CAPTAÇÕES'
+        verbose_name = 'SAIDA'
+        verbose_name_plural = 'SAÍDAS'
 
     def __str__(self):
         return self.hora
