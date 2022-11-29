@@ -4,14 +4,14 @@ from django.shortcuts import render
 from django.urls import reverse
 
 from eta_tres.forms import EtatresForm
-from eta_tres.models import Etatres
+from eta_tres.models import EtaTres
 
 
 # Create your views here.
 
 def eta_tres_list(request):
     template_name = 'eta_tres_list.html'
-    obj = Etatres.objects.all()
+    obj = EtaTres.objects.all()
     paginator = Paginator(obj, 12)
     page_number = request.GET.get('page')
     object_list = paginator.get_page(page_number)
@@ -33,7 +33,7 @@ def eta_tres_add(request):
 
 def eta_tres_update(request, pk):
     template_name = 'eta_tres_update.html'
-    obj = Etatres.objects.get(pk=pk)
+    obj = EtaTres.objects.get(pk=pk)
     form = EtatresForm(request.POST or None, instance=obj)
     if request.method == 'POST':
         if form.is_valid():
@@ -44,7 +44,7 @@ def eta_tres_update(request, pk):
 
 
 def eta_tres_delete(request, pk):
-    obj = Etatres.objects.get(pk=pk)
+    obj = EtaTres.objects.get(pk=pk)
     obj.delete()
     return HttpResponseRedirect(reverse('eta_tres:eta_tres_list'))
 
