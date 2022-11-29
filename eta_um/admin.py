@@ -7,5 +7,5 @@ from .models import EtaUm
 
 @admin.register(EtaUm)
 class EtaUmAdmin(admin.ModelAdmin):
-    list_display = ('data', 'hora', 'cloro', 'cor_d', 'ph_d', 'turbidez_d', 'cor_t', 'ph_t', 'turbidez_t',
+    list_display = ('data', 'hora', 'cloro', 'lavagem', 'cor_d', 'ph_d', 'turbidez_d', 'cor_t', 'ph_t', 'turbidez_t',
                     'filtro1', 'filtro2', 'filtro3', 'filtro4',)
