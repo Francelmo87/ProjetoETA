@@ -28,7 +28,7 @@ class Captacao(models.Model):
     class Meta:
         ordering = ('-data',)
         verbose_name = 'CAPTAÇÃO'
-        verbose_name_plural = 'CAPTAÇÕES'
+        verbose_name_plural = 'CAPTAÇÃO'
 
     def __str__(self):
         return self.hora

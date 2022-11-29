@@ -34,7 +34,7 @@ class EtaQuatro(models.Model):
 
     class Meta:
         ordering = ('-data',)
-        verbose_name = 'ETA Quatro'
+        verbose_name_plural = 'ETA QUATRO'
 
     def __str__(self):
         return self.hora

@@ -29,7 +29,7 @@ class Saida(models.Model):
 
     class Meta:
         ordering = ('-data',)
-        verbose_name = 'SAIDA'
+        verbose_name_plural = 'SAIDA'
 
     def __str__(self):
         return self.hora

@@ -37,7 +37,7 @@ class EtaUm(models.Model):
     class Meta:
         ordering = ('-data',)
         verbose_name = 'ETA 1'
-        verbose_name_plural = 'ETAS 1'
+        verbose_name_plural = 'ETA 1'
 
     def __str__(self):
         return self.hora

@@ -29,7 +29,7 @@ class EtaCinco(models.Model):
 
     class Meta:
         ordering = ('-data',)
-        verbose_name = 'ETA Cinco'
+        verbose_name_plural = 'ETA CINCO'
 
     def __str__(self):
         return self.hora
