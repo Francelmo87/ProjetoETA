@@ -1,3 +1,11 @@
 from django.contrib import admin
 
+from .models import EtaDois
+
 # Register your models here.
+
+
+@admin.register(EtaDois)
+class EtaUmAdmin(admin.ModelAdmin):
+    list_display = ('data', 'hora', 'cloro', 'cor_d', 'ph_d', 'turbidez_d', 'cor_t', 'ph_t', 'turbidez_t',)
+

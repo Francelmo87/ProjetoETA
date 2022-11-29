@@ -1,6 +1,6 @@
 from django import forms      # importação do formulario do django
 
-from .models import Etadois      # importando o modelo de Banco de dados
+from .models import EtaDois      # importando o modelo de Banco de dados
 
 
 class EtaDoisForm(forms.ModelForm):
@@ -16,5 +16,5 @@ class EtaDoisForm(forms.ModelForm):
     )
 
     class Meta:
-        model = Etadois
+        model = EtaDois
         fields = '__all__'

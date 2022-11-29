@@ -18,7 +18,7 @@ HORA_CHOICE = [
 ]
 
 
-class Etadois(models.Model):
+class EtaDois(models.Model):
     data = models.DateField('Data', auto_now=False, auto_now_add=False)
     hora = models.CharField(max_length=5, choices=HORA_CHOICE)
     lavagem = models.BooleanField('Lavagem', default=False, blank=True)
@@ -33,6 +33,7 @@ class Etadois(models.Model):
     class Meta:
         ordering = ('-data',)
         verbose_name = 'ETA DOIS'
+        verbose_name_plural = 'ETA DOIS'
 
     def __str__(self):
         return self.hora

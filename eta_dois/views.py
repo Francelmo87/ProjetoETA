@@ -4,14 +4,14 @@ from django.shortcuts import render
 from django.urls import reverse
 
 from eta_dois.forms import EtaDoisForm
-from eta_dois.models import Etadois
+from eta_dois.models import EtaDois
 
 
 # Create your views here.
 
 def eta_dois_list(request):
     template_name = 'eta_dois_list.html'
-    obj = Etadois.objects.all()
+    obj = EtaDois.objects.all()
 
     paginator = Paginator(obj, 12)
     page_number = request.GET.get('page')
@@ -34,7 +34,7 @@ def eta_dois_add(request):
 
 def eta_dois_update(request, pk):
     template_name = 'eta_dois_update.html'
-    obj = Etadois.objects.get(pk=pk)
+    obj = EtaDois.objects.get(pk=pk)
     form = EtaDoisForm(request.POST or None, instance=obj)
     if request.method == 'POST':
         if form.is_valid():
@@ -45,7 +45,7 @@ def eta_dois_update(request, pk):
 
 
 def eta_dois_delete(request, pk):
-    obj = Etadois.objects.get(pk=pk)
+    obj = EtaDois.objects.get(pk=pk)
     obj.delete()
     return HttpResponseRedirect(reverse('eta_dois:eta_dois_list'))
 
